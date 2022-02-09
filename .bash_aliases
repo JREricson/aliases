@@ -1,4 +1,4 @@
-##activate vitual env namded venv
+##activate vitual env named venv
 alias vir='source venv/bin/activate'
 # python
 alias p='python'
