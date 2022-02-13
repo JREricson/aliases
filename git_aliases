@@ -1,0 +1,7 @@
+stored in ~/.gitconfig
+
+[alias]
+	g1 = log --all --decorate --oneline --graph
+	cm = commit -m
+	po = push origin
+	pom = push origin main
