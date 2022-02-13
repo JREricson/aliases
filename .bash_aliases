@@ -9,9 +9,7 @@ alias open='xdg-open'
 
 gitNewRemote() {
     #do things with parameters like $1 such as
-    echo "$1"
-    git remote add origin git@github.com:JREricson/"$1".git
+    echo "adding remote repo for $1"
+    git remote add origin https://github.com/JREricson/"$1".git
 
 }
-
-# example https://stackoverflow.com/questions/7131670/make-a-bash-alias-that-takes-a-parameter
