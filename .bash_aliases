@@ -21,9 +21,10 @@ alias pmm="python manage.py migrate"
 pmsa(){
     python manage.py startapp "$1"
 }
-# pm(){
-#     python manage.py "$1" "$2" "$3" "$4"
-# }
+pm(){
+    python manage.py $@
+}
+
 
 ## system
 #########
