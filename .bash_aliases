@@ -1,16 +1,41 @@
 
-
 ## python 
 ##########
 #activate vitual env named venv
-alias vir='source venv/bin/activate'
+alias avir='source venv/bin/activate'
+alias mvir='virtualenv venv'
+vir(){
+    virtualenv venv
+    source venv/bin/activate
+
+}
 # python
-alias p='python'
+alias python='python3'
+alias p='python3'
+alias pip='python3 -m pip'
+
+#django
+alias pmrs="python manage.py runserver"
+alias pmmm="python manage.py makemigrations"
+alias pmm="python manage.py migrate"
+pmsa(){
+    python manage.py startapp "$1"
+}
+# pm(){
+#     python manage.py "$1" "$2" "$3" "$4"
+# }
 
 ## system
 #########
 alias term='xfce4-terminal'
 alias open='xdg-open'
+alias hist='history'
+alias ..='cd ..;pwd'
+alias ...='cd ../..;pwd'
+alias ....='cd ../../..;pwd'
+alias .....='cd ../../../..;pwd'
+
+
 
 #trash option to substitute rm
 trashItem () {
@@ -35,27 +60,25 @@ countfiles(){
 }
 
 
+gh(){
+    history | grep "$1"
+}
+
+
 ## git
 ########
 
 gitNewRemote() {
-    #do things with parameters like $1 such asxample https://stackoverflow.com/questions/7131670/make-a-bash-alias-that-takes-a-parameter./unknown employer -- craigslist --Application Developer - software _ qa _ dba _ etc - job employment.pdf
-
+  
     echo "adding remote repo for $1"
     git remote add origin https://github.com/JREricson/"$1".git
 
 }
-gitNewFullPathRemote() {
-    #do things with parameters like $1 such as
-    echo "adding remote repo for $1"
-    git remote add origin "$1"
 
-}
+alias g='git'
 
 
 ##
 checkInternetSpeed(){
     curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
 }
-
-
