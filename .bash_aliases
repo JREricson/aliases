@@ -64,6 +64,11 @@ gh(){
     history | grep "$1"
 }
 
+hg(){
+    history | grep "$1"
+}
+
+
 
 ## git
 ########
@@ -82,3 +87,4 @@ alias g='git'
 checkInternetSpeed(){
     curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
 }
+
