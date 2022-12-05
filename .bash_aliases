@@ -13,6 +13,7 @@ vir(){
 alias python='python3'
 alias p='python3'
 alias pip='python3 -m pip'
+alias pipfr='python3 -m pip freeze > requirements.txt'
 
 #django
 alias pmrs="python manage.py runserver"
@@ -25,6 +26,11 @@ pm(){
     python manage.py $@
 }
 
+## Docker
+#########
+alias dk='docker'
+alias dc='docker-compose'
+
 
 ## system
 #########
@@ -35,7 +41,8 @@ alias ..='cd ..;pwd'
 alias ...='cd ../..;pwd'
 alias ....='cd ../../..;pwd'
 alias .....='cd ../../../..;pwd'
-
+#show hidden directories
+alias l.='ls -d .*'
 
 
 #trash option to substitute rm
@@ -60,7 +67,6 @@ countfiles(){
     echo "($items)" | wc -l    
 }
 
-
 gh(){
     history | grep "$1"
 }
@@ -68,7 +74,6 @@ gh(){
 hg(){
     history | grep "$1"
 }
-
 
 
 ## git
@@ -84,8 +89,12 @@ gitNewRemote() {
 alias g='git'
 
 
-##
+
+
+## Misc
+#######
 checkInternetSpeed(){
     curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -
 }
+
 
